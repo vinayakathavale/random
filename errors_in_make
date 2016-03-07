@@ -1,0 +1,31 @@
+Note : building using cmake
+
+warning1: variable set but unused (warning can be removed by just removing the variable "not advisable to do so")
+/home/vinayak/Desktop/ccextractor/src/zvbi/decoder.c:531:18: warning: variable ‘service_set’ set but not used [-Wunused-but-set-variable] vbi_service_set service_set;
+(this warning occurs multiple times)
+
+warning2: similar to above (can be removed by just removing the variable declaration)
+/home/vinayak/Desktop/ccextractor/src/zvbi/raw_decoder.c:1214:15: warning: unused variable ‘i’ [-Wunused-variable]  unsigned int i;
+
+warning3: at many places string literals defined as 'unsigned char *' when they should be defined as 'const char *' (occurs in many places)
+/home/vinayak/Desktop/ccextractor/src/lib_ccx/ccx_decoders_isdb.c: In function ‘reserve_buf’:
+/home/vinayak/Desktop/ccextractor/src/lib_ccx/ccx_decoders_isdb.c:373:12: warning: pointer targets in assignment differ in signedness [-Wpointer-sign]
+  text->buf = ptr;
+
+warning4: function having non void return type is no returning anything (a simple return 0 will fix this) 
+/home/vinayak/Desktop/ccextractor/src/lib_ccx/ccx_decoders_isdb.c:376:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+
+ warning5: will be fixed by adding while compiling '-Wno-unknown-pragmas' not sure if should be done
+ /home/vinayak/Desktop/ccextractor/src/lib_ccx/networking.c:22:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+ #pragma warning( suppress : 4005)
+ ^
+ warning6: adding paranthesis should do it
+ /home/vinayak/Desktop/ccextractor/src/lib_ccx/ccx_decoders_xds.c:703:9: warning: suggest parentheses around operand of ‘!’ or change ‘&’ to ‘&&’ or ‘!’ to ‘~’ [-Wparentheses]
+     if (!ctx->cur_xds_payload[2] & 20 || !ctx->cur_xds_payload[3] & 20) // Bit 6 must be 1
+         ^
+
+
+
+

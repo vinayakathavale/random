@@ -1,0 +1,2 @@
+# random
+collections of scripts

@@ -17,14 +17,14 @@ warning4: function having non void return type is no returning anything (a simpl
  }
  ^
 
- warning5: will be fixed by adding while compiling '-Wno-unknown-pragmas' not sure if should be done
- /home/vinayak/Desktop/ccextractor/src/lib_ccx/networking.c:22:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
- #pragma warning( suppress : 4005)
- ^
- warning6: adding paranthesis should do it
- /home/vinayak/Desktop/ccextractor/src/lib_ccx/ccx_decoders_xds.c:703:9: warning: suggest parentheses around operand of ‘!’ or change ‘&’ to ‘&&’ or ‘!’ to ‘~’ [-Wparentheses]
-     if (!ctx->cur_xds_payload[2] & 20 || !ctx->cur_xds_payload[3] & 20) // Bit 6 must be 1
-         ^
+warning5: will be fixed by adding while compiling '-Wno-unknown-pragmas' not sure if should be done
+/home/vinayak/Desktop/ccextractor/src/lib_ccx/networking.c:22:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+#pragma warning( suppress : 4005)
+^
+warning6: adding paranthesis should do it
+/home/vinayak/Desktop/ccextractor/src/lib_ccx/ccx_decoders_xds.c:703:9: warning: suggest parentheses around operand of ‘!’ or change ‘&’ to ‘&&’ or ‘!’ to ‘~’ [-Wparentheses]
+   if (!ctx->cur_xds_payload[2] & 20 || !ctx->cur_xds_payload[3] & 20) // Bit 6 must be 1
+       ^
 
 
 
